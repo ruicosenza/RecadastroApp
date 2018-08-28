@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Anistia</string>
+    <string name="title_new_search">Nova Busca</string>
+    <string name="title_end_session">Encerrar Sessão</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_resultado_busca">ResultadoBusca</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_search_result">SearchResult</string>
+    <string name="title_activity_partner_details">PartnerDetails</string>
+    <string name="title_search_">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="partner_details_title">DADOS DOS ASSOCIADOS</string>
+    <string name="recadastramento_de_socios">RECADASTRAMENTO DE SÓCIOS</string>
+    <string name="cpf">CPF</string>
+    <string name="nome">Nome</string>
+    <string name="matricula">Matrícula</string>
+    <string name="buscar_socio">Buscar Sócio</string>
+    <string name="a_busca_nao_retornou_resultado">A busca não retornou resultado</string>
+    <string name="resultado_de_busca">RESULTADO DE BUSCA</string>
+    <string name="escudo_do_vasco">Escudo do Vasco</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>

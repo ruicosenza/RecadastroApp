@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginRight="36dp"
+    android:layout_marginLeft="36dp"
+    android:background="@android:color/darker_gray"
+    android:id="@+id/item_container">
+
+    <TextView
+        android:id="@+id/item_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"/>
+
+
+    <TextView
+        android:id="@+id/item_cpf"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_below="@id/item_nome"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/white"
+        tools:text="cpf"/>
+
+    <TextView
+        android:id="@+id/item_matricula"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@id/item_nome"
+        android:layout_toEndOf="@id/item_cpf"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/white"
+        tools:text="matricula"/>
+
+
+</RelativeLayout>
