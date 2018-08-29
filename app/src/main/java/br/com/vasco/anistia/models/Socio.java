@@ -10,7 +10,7 @@ public class Socio implements Serializable{
 
     public Socio(){}
 
-    public Socio(String nome, String matricula, String cpf) {
+    public Socio(String nome, String cpf, String matricula) {
         this.nome = nome;
         this.matricula = matricula;
         this.cpf = cpf;

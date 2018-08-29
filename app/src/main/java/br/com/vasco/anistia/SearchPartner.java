@@ -15,10 +15,10 @@ import br.com.vasco.anistia.webservice.HttpService;
 
 public class SearchPartner extends AppCompatActivity {
 
-    private TextView tnome;
-    private TextView tcpf;
-    private TextView tmatricula;
-    private TextView retornoVazio;
+    private TextView tvnome;
+    private TextView tvcpf;
+    private TextView tvmatricula;
+    private TextView tvretornoVazio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +26,10 @@ public class SearchPartner extends AppCompatActivity {
         setContentView(R.layout.activity_search_partner);
 
         final Button searchButton = findViewById(R.id.buscar_socio);
-        tnome = findViewById(R.id.input_nome);
-        tcpf = findViewById(R.id.input_cpf);
-        tmatricula = findViewById(R.id.input_matricula);
-        retornoVazio = findViewById(R.id.retorno_vazio);
+        tvnome = findViewById(R.id.input_nome);
+        tvcpf = findViewById(R.id.input_cpf);
+        tvmatricula = findViewById(R.id.input_matricula);
+        tvretornoVazio = findViewById(R.id.retorno_vazio);
 
         searchButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -38,26 +38,26 @@ public class SearchPartner extends AppCompatActivity {
                 String cpf = "";
                 String matricula = "";
 
-                if( tnome != null && tnome.getText() != null){
-                    nome = tnome.getText().toString();   
+                if( tvnome != null && tvnome.getText() != null){
+                    nome = tvnome.getText().toString();
                 }
                 
-                if( tcpf != null && tcpf.getText() != null ){
-                    cpf = tcpf.getText().toString();
+                if( tvcpf != null && tvcpf.getText() != null ){
+                    cpf = tvcpf.getText().toString();
                 }
 
-                if( tmatricula != null && tmatricula.getText() != null ){
-                    matricula = tmatricula.getText().toString();
+                if( tvmatricula != null && tvmatricula.getText() != null ){
+                    matricula = tvmatricula.getText().toString();
                 }
 
                 try {
-                    ArrayList<Socio> socios = service.execute(nome, cpf, matricula).get();
+                    ArrayList<Socio> socios = service.execute(new Socio(nome, cpf, matricula)).get();
 
                     if( socios.isEmpty() || socios.size() == 0){
-                        retornoVazio.setText("A busca não retornou resultado");
+                        tvretornoVazio.setText(R.string.a_busca_nao_retornou_resultado);
                         /*startActivityForResult(SearchPartner.this, 300);*/
                     } else {
-                        retornoVazio.setText("");
+                        tvretornoVazio.setText("");
                         for (Socio s : socios) {
                             System.out.println(s.getNome());
                         }
@@ -72,8 +72,6 @@ public class SearchPartner extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
-
             }
         });
     }
