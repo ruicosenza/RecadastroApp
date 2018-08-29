@@ -17,10 +17,8 @@ import br.com.vasco.anistia.models.Socio;
 public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder> {
     private List<Socio> mResultItems;
 
-
     public ResultAdapter(List<Socio> resultItems) {
         mResultItems = resultItems;
-
     }
 
     @NonNull
@@ -45,7 +43,6 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             viewHolder.itemContainer.setBackgroundColor(Color.parseColor("#cccccc"));
         } else {
             viewHolder.itemContainer.setBackgroundColor(Color.parseColor("#666666"));
-
         }
 
         TextView itemName = viewHolder.itemNome;
@@ -62,7 +59,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
         return mResultItems.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+        public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView itemNome;
         public TextView itemCpf;
         public TextView itemMatricula;
@@ -73,11 +70,10 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
 
             super(itemView);
 
-            itemNome = (TextView) itemView.findViewById(R.id.item_nome);
-            itemCpf = (TextView) itemView.findViewById(R.id.item_cpf);
-            itemMatricula = (TextView) itemView.findViewById(R.id.item_matricula);
-            itemContainer = (RelativeLayout) itemView.findViewById(R.id.item_container);
-
+            itemNome = itemView.findViewById(R.id.item_nome);
+            itemCpf = itemView.findViewById(R.id.item_cpf);
+            itemMatricula = itemView.findViewById(R.id.item_matricula);
+            itemContainer = itemView.findViewById(R.id.item_container);
         }
     }
 }

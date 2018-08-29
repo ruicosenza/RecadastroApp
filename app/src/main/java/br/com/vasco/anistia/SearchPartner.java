@@ -55,7 +55,6 @@ public class SearchPartner extends AppCompatActivity {
 
                     if( socios.isEmpty() || socios.size() == 0){
                         tvretornoVazio.setText(R.string.a_busca_nao_retornou_resultado);
-                        /*startActivityForResult(SearchPartner.this, 300);*/
                     } else {
                         tvretornoVazio.setText("");
                         for (Socio s : socios) {
@@ -67,7 +66,7 @@ public class SearchPartner extends AppCompatActivity {
                         searchResultIndent.putExtra("lista_socios", socios);
                         startActivityForResult(searchResultIndent,2);
                     }
-                } catch (ExecutionException e) {
+                } catch (ExecutionException e ) {
                     e.printStackTrace();
                 } catch (InterruptedException e) {
                     e.printStackTrace();

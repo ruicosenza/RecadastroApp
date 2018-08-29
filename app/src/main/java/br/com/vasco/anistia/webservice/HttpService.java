@@ -22,11 +22,6 @@ public class HttpService extends AsyncTask<Socio, Void, ArrayList<Socio>>{
     }
 
     @Override
-    protected void onPostExecute(ArrayList<Socio> socios) {
-        super.onPostExecute(socios);
-    }
-
-    @Override
     protected ArrayList<Socio> doInBackground(Socio... socios) {
         RestTemplate restTemplate = new RestTemplate();
 
