@@ -30,8 +30,14 @@ public class HttpService extends AsyncTask<Socio, Void, ArrayList<Socio>>{
 
         HttpEntity<Socio> entity = new HttpEntity<>(socios[0], headers);
 
-        ResponseEntity<Socio[]> forEntity = restTemplate.postForEntity("http://10.5.114.254:8080/getSocio", entity, Socio[].class);
-        socios = new Gson().fromJson(forEntity.toString(), Socio[].class);
+        ResponseEntity<Socio[]> forEntity = restTemplate.postForEntity("http://192.168.0.17:8085/getSocio", entity, Socio[].class);
+
+        try {
+            socios = forEntity.getBody();
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+
 
         return new ArrayList<>(Arrays.asList(socios));
     }

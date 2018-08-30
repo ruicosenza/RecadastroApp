@@ -8,6 +8,8 @@ public class Socio implements Serializable{
     private String matricula;
     private String cpf;
 
+    public Socio(){}
+
     public Socio(String nome, String cpf, String matricula) {
         this.nome = nome;
         this.matricula = matricula;
